@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   // property that the html component can use or display data
-  name = 'Jon';
 }
