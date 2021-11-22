@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 
-// decorator to enhance the component
+// decorator to enhance the component.
 // configuring the decorator
 @Component({
     selector: "app-server",
