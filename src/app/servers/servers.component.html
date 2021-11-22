@@ -8,11 +8,18 @@ so this is why between the quotation marks, you can already and you have already
 
 code because again, this whole expression is evaluated by Angular, mixing in string interpolation will
 
-break it, -->
+break it, 
+Traditionally, we could use onclick event that the element offers us, however Angular offers Event Binding.
+creating an Event with (name of event)
+-->
 <button class="btn btn-primary"
-    [disabled]="!allowNewServer">
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()">
     Add Server
 </button>
-<p [innerText]="allowNewServer"></p>
+<!-- <p [innerText]="allowNewServer"></p> -->
+<p>
+    {{serverCreationStatus}}
+</p>
 <app-server></app-server>
 
