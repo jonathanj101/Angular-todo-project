@@ -9,7 +9,7 @@ import { Component } from "@angular/core";
 })
 export class ServerComponent {
     // defining properties (TypeScript difining) to be use in the component
-    // TypeScript defining variable, either string, number etc has to be declared or say it
+    // TypeScript defining variable, the value has to be declared either number, string, etc
     serverId: number = 10;
     serverStatus: string = "offline";
 
