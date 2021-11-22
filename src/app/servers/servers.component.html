@@ -1,3 +1,10 @@
-
+<!-- property binding using Square brackets [] which tells Angular that we want to dynamically bind some property and disable the HTML attribute.
+    but here we're not using the disabled attribute anymore, with the square brackets, we are directly binding
+to this native disabled property
+ -->
+<button class="btn btn-primary"
+    [disabled]="!allowNewServer">
+    Add Server
+</button>
 <app-server></app-server>
 
