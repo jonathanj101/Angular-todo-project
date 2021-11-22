@@ -6,10 +6,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+// importting server component for TypeScript
+import { ServerComponent } from './server/server.component';
 
 @NgModule({
+  // By default, Angular does not know about new components even though it builds the folders/files. We need to import it.
   declarations: [
-    AppComponent
+    AppComponent,
+    ServerComponent,
   ],
   // imports features for Angular
   imports: [
