@@ -3,15 +3,25 @@
 to this native disabled property
  -->
  <!-- this whole syntax here [disabled]="!allowNewServer" is a syntax recognized by Angular,
-
 so this is why between the quotation marks, you can already and you have already, you have to write TypeScript
-
 code because again, this whole expression is evaluated by Angular, mixing in string interpolation will
-
 break it, 
-Traditionally, we could use onclick event that the element offers us, however Angular offers Event Binding.
-creating an Event with (name of event)
 -->
+
+<!-- 
+    Traditionally, we could use onclick event that the element offers us, however Angular offers Event Binding.
+    creating an Event with (name of event)
+ -->
+
+ <!-- 
+    listening to the input event (input)
+    (input)="onUpdateServerName($event)" this will update the server name on keystrokes, the $ sign reserved word which gives us access to event data. Thus passing as $event is to retrieve the data and be able to use that in our method
+  -->
+
+
+<label>Server Name</label>
+<input type="text" class="form-control"
+(input)="onUpdateServerName($event)">
 <button class="btn btn-primary"
     [disabled]="!allowNewServer"
     (click)="onCreateServer()">
