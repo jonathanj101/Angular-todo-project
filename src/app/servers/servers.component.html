@@ -2,9 +2,17 @@
     but here we're not using the disabled attribute anymore, with the square brackets, we are directly binding
 to this native disabled property
  -->
+ <!-- this whole syntax here [disabled]="!allowNewServer" is a syntax recognized by Angular,
+
+so this is why between the quotation marks, you can already and you have already, you have to write TypeScript
+
+code because again, this whole expression is evaluated by Angular, mixing in string interpolation will
+
+break it, -->
 <button class="btn btn-primary"
     [disabled]="!allowNewServer">
     Add Server
 </button>
+<p [innerText]="allowNewServer"></p>
 <app-server></app-server>
 
