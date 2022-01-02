@@ -5,7 +5,18 @@
 <h1>
     {{'Server'}} with ID {{serverId}} is {{getServerStatus()}}
 </h1> -->
+
 <!-- property binding -->
 <!-- [] are not part of the directive ngStyle
 string interpolation execute typeScript code therefore  we can use a method we define -->
-<p [ngStyle]="{backgroundColor: getColor()}">{{"Server"}} with ID {{serverId}} is {{getServerStatus()}}</p>
+<!-- ngStyles allowed use to change the CSS style itself
+With ngClass allows us to dynicammly to change css classes 
+In ngClass, we use js Object and for ngClass object works as follows;
+1. have key-values pairs
+2. Keys are the CSS class names
+3. values are the conditions determining whether this class should be attached or not
+-->
+<p [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{online:serverStatus==='online'}"
+>{{"Server"}} with ID {{serverId}} is {{getServerStatus()}}
+</p>
