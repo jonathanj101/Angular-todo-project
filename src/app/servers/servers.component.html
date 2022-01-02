@@ -39,8 +39,19 @@ break it,
     Add Server
 </button>
 <!-- <p [innerText]="allowNewServer"></p> -->
-<p>
+<!-- <p>
     {{serverCreationStatus}}
-</p>
+</p> -->
+<!-- Directives are intructions in DOM
+the * is for to indicate an instructional directive, in this if serverCreated (true/false)-->
+<p *ngIf="serverCreated; else noServer">Server was created, servername is {{serverName}}</p>
+<!--Local reference starts with # follow by the name you'll like.
+else statement with ngIf and need to use ng-templace to work.
+can be think as a marker-->
+<ng-template #noServer>
+    <p>
+        No server was created!
+    </p>
+</ng-template>
 <app-server></app-server>
 
