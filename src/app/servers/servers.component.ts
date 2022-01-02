@@ -26,7 +26,7 @@ export class ServersComponent implements OnInit {
   }
   onUpdateServerName(event:Event) {
     console.log(event)
-    this.serverName = event.target.value;
+    // this.serverName = event.target.value;
     // This is used to prevent TypeScript Lint warning/error since we're getting an HTML event
     // we can explicitly inform it about the type in TypeScript by adding HTML input element here
     // in front of it, like this
