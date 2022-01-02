@@ -42,16 +42,21 @@ break it,
 <!-- <p>
     {{serverCreationStatus}}
 </p> -->
-<!-- Directives are intructions in DOM
-the * is for to indicate an instructional directive, in this if serverCreated (true/false)-->
-<p *ngIf="serverCreated; else noServer">Server was created, servername is {{serverName}}</p>
+<!-- Directives are intructions in DOM.
+the * is for to indicate an instructional directive, in this if serverCreated (true/false)
+ngIf directive is a structural directive, which either add/remove elements
+There are other types of directives such as attribute directives(called like this bc they look like normal HTML attributes without a star bisacally) which only updates elements not change them
+-->
+<!-- <p *ngIf="serverCreated; else noServer">Server was created, servername is {{serverName}}</p> -->
 <!--Local reference starts with # follow by the name you'll like.
 else statement with ngIf and need to use ng-templace to work.
 can be think as a marker -->
-<ng-template #noServer>
+<!-- <ng-template #noServer>
     <p>
         No server was created!
     </p>
-</ng-template>
+</ng-template> -->
 <app-server></app-server>
+<app-server></app-server>
+
 
