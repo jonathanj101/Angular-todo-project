@@ -9,7 +9,8 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = "No server was created!";
   serverName = 'Testserver';
-  serverCreated = false
+  serverCreated = false;
+  servers = ['Testserver', 'Testserver 2']
 
   constructor() { 
     setTimeout(()=>{
@@ -22,6 +23,7 @@ export class ServersComponent implements OnInit {
   // creating a new methon. Not necessarily needs 'on' but for readability and understading purposes is easier.
   onCreateServer() {
     this.serverCreated = true
+    this.servers.push(this.serverName)
     this.serverCreationStatus = "Server was created!";
   }
   onUpdateServerName(event:Event) {
