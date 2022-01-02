@@ -38,10 +38,10 @@ break it,
     (click)="onCreateServer()">
     Add Server
 </button>
-<p [innerText]="allowNewServer"></p> -->
+<!-- <p [innerText]="allowNewServer"></p> -->
 <!-- <p>
     {{serverCreationStatus}}
-</p>
+</p> -->
 <!-- Directives are intructions in DOM
 the * is for to indicate an instructional directive, in this if serverCreated (true/false)-->
 <p *ngIf="serverCreated; else noServer">Server was created, servername is {{serverName}}</p>
